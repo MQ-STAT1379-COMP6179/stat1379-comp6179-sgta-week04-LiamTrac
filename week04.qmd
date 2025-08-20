@@ -50,10 +50,12 @@ str(x)
 **Your observations:**
 
 - What differences do you notice between these three ways of creating vectors?
+seq and c() create a vector of doubles, while a:b creates a vector of integers
 - Why might `typeof()` give different results?
+becasue depending on the method that was used to create the vector, the vector might be made up of a different kind of data.
 
 *Write your thoughts here:*
-
+Depending on what you want your vector to be made of, you can select a particular method of creation so that you don't have to change the data type of the vector.
 
 
 #### Atomic Vectors - Integers  
@@ -81,10 +83,12 @@ str(x)
 **Your observations:**
 
 - What happens when you mix integers and doubles in a vector?
+The vector data type defaults to double as it can essentially store integer values as well, while integer data cannot store doubles
 - What does the `L` suffix do?
+the 'L' suffix seems to make the assigned value an integer
 
 *Write your thoughts here:*
-
+you can add Ls to vector creation commands to change their nature
 
 
 #### Atomic Vectors - Characters  
@@ -130,8 +134,10 @@ glue::glue("This unit is great.
 - What's the difference between `paste()`, `cat()`, and `glue()`?
 
 *Write your analysis here:*
-
-
+You have the option to include each word separately as its own element in the list, or you can include them all as one element.
+In paste(), you have the option to choose a character(s) to separate each element when the variable is called upon.
+In cat() it adds a space between each element by default so that it is interpreted as a proper sentence when called. You can choose to change the seperation however, to a tab with /t and a return with /n.
+glue() essentially allows you to write sentences as you want them to be seen, straight into the command black
 
 #### Atomic Vectors - Logicals  
 
@@ -172,7 +178,8 @@ str(x)
 - What's the difference between `=` and `==`?
 
 *Write your explanation here:*
-
+'1 <- 1' doesn't work because <- is for variable assignment and 1 is not a valid variable
+'=' is a declaration saying that one thing is equivalent another thing. '==' is a boolean check to see if the two values on either side of the symbol are equivalent.
 
 
 #### Factors  
@@ -200,7 +207,7 @@ as.character(x)
 - How are factors different from character vectors?
 
 *Write your thoughts here:*
-
+factors assign each identical elements the same value, giving the whole vector integer value equivalents.
 
 
 ### Working with Matrices and Arrays  
@@ -225,7 +232,7 @@ m
 - How does R fill matrices by default?
 
 *Write your answer here:*
-
+by default, it creates the matrix column by column, but when you make byrow=TRUE, then the matrix is created row by row.
 
 
 #### Arrays  
@@ -259,7 +266,8 @@ x
 - How do 3-dimensional arrays work?
 
 *Write your explanation here:*
-
+When a c reted matrix requires more values then provided, it will recycle the values it has already used.
+3 dimensional arrays essentially give you multiple arrays of the same size, labeled 1 through to n (however long the 3rd dimension is difined to be)
 
 
 ### Working with Lists  
@@ -287,7 +295,8 @@ x
 - What are the advantages of named lists?
 
 *Write your analysis here:*
-
+lists can hold more than one kind of data, while vectors cant.
+Named lists allow you to properly organise data to make data calling easier.
 
 
 ### Working with Data Frames and Tibbles  
@@ -337,7 +346,8 @@ x
 - When would you use `tribble()` instead of `tibble()`?
 
 *Write your thoughts here:*
-
+The main difference is class with data frames being classed as just "data.frame", and tibbles having "tbl_df", "tbl" and "data.frame"
+you would use tribble over tibble when you are looking to frequently call on the data for investigation
 
 
 ## Loading and Saving Data  
