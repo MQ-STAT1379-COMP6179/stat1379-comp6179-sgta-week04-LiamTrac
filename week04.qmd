@@ -347,7 +347,7 @@ x
 
 *Write your thoughts here:*
 The main difference is class with data frames being classed as just "data.frame", and tibbles having "tbl_df", "tbl" and "data.frame"
-you would use tribble over tibble when you are looking to frequently call on the data for investigation
+you would use tribble over tibble when you are looking to frequently call on the data for investigation.
 
 
 ## Loading and Saving Data  
